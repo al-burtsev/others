@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 50px 15px;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.left {
+    flex-basis: 50%;
+    margin-right: 30px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    border: 1px solid red;
+}
+
+.left-card {
+    min-height: 100%;
+}
+
+.card__top {
+    margin-bottom: 30px;
+    flex-basis: 50%;
+}
+
+.card__bottom {
+    flex-basis: 50%;
+}
