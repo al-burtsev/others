@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .container {
+      margin-bottom: 50px;
+      padding: 25px;
+      border: 1px dotted gold;
+    }
+
+    label {
+      position: relative;
+      padding-left: 20px;
+      cursor: pointer;
+    }
+
+    #checkbox {
+      display: none;
+    }
+
+    #checkbox+span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 15px;
+      height: 15px;
+      text-align: center;
+      border: 1px solid #111;
+    }
+
+    #checkbox+span:before {
+      content: '\2713';
+      position: absolute;
+      top: -4px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    #checkbox:checked+span:before {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container"> <label for="checkbox">
+      <input id="checkbox" type="checkbox" name="checkbox">
+      checkbox
+      <span></span>
+    </label>
+  </div>
+
+  <div class="container">
+    <label for="male">
+      <input type="radio" id="male" name="sex" value="male">
+      Мужской
+    </label>
+    <label for="female">
+      <input type="radio" id="female" name="sex" value="female">
+      Женский
+    </label>
+  </div>
+</body>
+
+</html>

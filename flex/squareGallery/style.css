@@ -1,0 +1,60 @@
+.container {
+  box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 60%;
+    height: 700px;
+    padding: 20px 30px;
+    background: beige;
+}
+
+.gallery-item {
+    box-sizing: border-box;
+    width: 32%;
+    margin-bottom: 10px;
+    padding: 10px;
+    color: #fff;
+    background: blueviolet;
+}
+
+.gallery-item:nth-child(3n + 1){
+  order: 1;
+}
+
+.gallery-item:nth-child(3n + 2){
+  order: 2;
+}
+
+.gallery-item:nth-child(3n){
+  order: 3;
+}
+
+
+.height-120 {
+    height: 120px;
+  }
+  
+  .height-140 {
+    height: 140px;
+  }
+  
+  .height-150 {
+    height: 150px;
+  }
+  
+  .height-160 {
+    height: 160px;
+  }
+  
+  .height-170 {
+    height: 170px;
+  }
+  
+  .height-180 {
+    height: 180px;
+  }
+  
+  .height-190 {
+    height: 190px;
+  }
