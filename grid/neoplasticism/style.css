@@ -1,0 +1,78 @@
+:root {
+    --border-big-size: 15px;
+    --border-medium-size: 10px;
+    --border-small-size: 8px;
+    --border-color: #333;
+    --red: #f44336;
+    --yellow: #ffeb3b;
+    --blue: #2196f3;
+  }
+  
+  body {
+    box-sizing: border-box;
+    width: 700px;
+    height: 700px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+  
+    box-sizing: border-box;
+    height: 100%;
+    padding: 20px;
+  
+    border: 5px solid var(--border-color);
+  }
+    
+  .red {
+    background: var(--red);
+  }
+  
+  .yellow {
+    background: var(--yellow);
+  }
+  
+  .blue {
+    background: var(--blue);
+  }
+  
+  .bb {
+    border-right: var(--border-big-size) solid var(--border-color);
+  }
+  
+  .bm {
+    border-bottom: var(--border-medium-size) solid var(--border-color);
+  }
+  
+  .bs {
+    border-right: var(--border-small-size) solid var(--border-color);
+  }
+  
+  .col-2 {
+    grid-column: span 2;
+  }
+  
+  .col-3 {
+    grid-column: span 3;
+  }
+  
+  .col-5 {
+    grid-column: span 5;
+  }
+  
+  .row-2 {
+    grid-row: span 2;
+  }
+  
+  .row-3 {
+    grid-row: span 3;
+  }
+  
+  .row-4 {
+    grid-row: span 4;
+  }
+  
