@@ -1,0 +1,31 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body
+      - const one = 1;
+      - const two = 2;
+      - const action = "plus";
+
+      - const title = "Программы обучения на Хекслете"; // JavaScript код
+      - const html = "<p>Текст параграфа</p>";
+      - let counter = 1;
+      .container
+       .row
+        .col-12
+         h1 #{title}
+       .row 
+        .col-12
+         .calculation
+          | #{one} #{action} #{two} = #{one + two}
+         .result
+          | #{html}
+          //- можно выводить значения тегов из переменной "как есть", но могут возникнуть проблемы с безопасностью
+         .result
+          | !{html}
+         .plus
+          p= 2 + 2
+         .buffer
+          p= "<span>Hello</span>, Hexlet"

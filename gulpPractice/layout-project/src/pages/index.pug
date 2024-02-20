@@ -1,0 +1,64 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet", href="css/app.css")
+    body 
+      -
+        const users = [
+          {
+            name: 'Кодовенок',
+            surname: 'Хекслетович',
+            login: 'hexlet-code',
+            score: 1271
+          },
+          {
+            name: 'Король',
+            surname: 'Верстки',
+            login: 'king-of-layout',
+            score: 1100
+          },
+        ]
+      header 
+        p HELLO WORLD
+        mixin buttonOrder
+          button.btn.btn-order Оформить заявку
+        mixin button(title)
+          button.btn.btn-order= title
+        +buttonOrder
+        +buttonOrder
+        +buttonOrder
+        +button('Заказать')
+        +button('Заказать снова')
+        mixin buttonEx(title = 'Поздравляем')
+          button.btn.btn-order= title
+        +buttonEx
+        +buttonEx('Оформить заявку')
+      main
+        mixin createUserTable(usersData = [])
+          table
+            thead
+              tr
+                th Имя
+                th Фамилия
+                th Логин
+                th Баллы
+            tbody
+              each user in usersData
+                tr
+                  td= user.name
+                  td= user.surname
+                  td= user.login
+                  td= user.score
+              else
+                tr
+                  td(colspan='4') Пользователи отсутствуют
+        section
+          h2 Лучшие из лучших
+          +createUserTable(users)
+
+          h2 Худшие из худших
+          +createUserTable(badUsers)
+
